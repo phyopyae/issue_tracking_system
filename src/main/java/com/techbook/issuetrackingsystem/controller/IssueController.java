@@ -50,6 +50,10 @@ public class IssueController {
             issue.setTitle(issueDetails.getTitle());
             issue.setDescription(issueDetails.getDescription());
             issue.setStatus(issueDetails.getStatus());
+            issue.setPriority(issueDetails.getPriority());
+            issue.setAssignee(issueDetails.getAssignee());
+            issue.setReporter(issueDetails.getReporter());
+            issue.setDueDate(issueDetails.getDueDate());
             issueService.saveIssue(issue);
             return ResponseEntity.ok(issue);
         }
